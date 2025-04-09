@@ -187,11 +187,11 @@ export default function App() {
     };
 
     const category = categories[selectedCategory];
-    if (!category) return null;
+    if (!category) return null;       //gradient-to-br ${category.gradient}
 
     return (
-      <div className="p-9 min-h-screen flex flex-col justify-between">
-        <div className={`bg-gradient-to-br ${category.gradient} p-5 rounded-lg shadow-lg text-white`}>
+      <div className="px-5 min-h-screen flex flex-col justify-between">
+        <div className={`bg-gradient-to-br ${category.gradient} px-20 py-4 rounded-lg shadow-lg text-white`}>
           <h2 className="text-center text-3xl font-bold mb-6"> {selectedCategory}</h2>
           <div className="space-y-4">
             {category.fields.map((field) => (
